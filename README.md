@@ -1,16 +1,41 @@
-# React + Vite
+ Automated Resume Screening System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ What is this product?
 
-Currently, two official plugins are available:
+The Automated Resume Screening System is an AI-powered recruitment tool that helps HR teams screen multiple candidate resumes automatically against a Job Description (JD).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system analyzes each candidate's resume, compares it with the requirements of the JD, and generates a matching score based on skills, experience, education, projects, and overall JD alignment.
 
-## React Compiler
+ How it works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. HR creates or enters a Job Description.
+2. HR uploads multiple candidate resumes.
+3. The system analyzes each resume using AI.
+4. Each candidate is compared against the Job Description.
+5. A matching score is generated for every candidate.
+6. Candidates who meet the required score are shortlisted.
+7. Candidates below the required score are rejected.
+8. Rejection emails are sent automatically to rejected candidates.
+9. Shortlisted candidates are recorded for further recruitment steps.
+10. Candidate details, scores, summaries, and screening results are stored in **Google Sheets** for easy access and tracking.
 
-## Expanding the ESLint configuration
+ Key Benefits
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Automates the resume screening process
+- Screens multiple resumes in a single workflow
+- Matches resumes against the Job Description
+- Generates candidate matching scores
+- Automatically shortlists qualified candidates
+- Automatically sends rejection emails to candidates who do not meet the required criteria
+- Stores candidate screening data and results in Google Sheets
+- Reduces manual effort and speeds up the recruitment process
+
+ Technology
+
+- React
+- FastAPI
+- Python
+- n8n
+- LLM / Ollama
+- PostgreSQL
+- Google Sheets
