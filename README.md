@@ -39,3 +39,10 @@ The system analyzes each candidate's resume, compares it with the requirements o
 - LLM / Ollama
 - PostgreSQL
 - Google Sheets
+
+
+ UI Design
+
+The UI prototype for the Automated Resume Screening System was designed using Google Stitch.
+
+[View UI Design](https://stitch.withgoogle.com/projects/15185186138136535183)
