@@ -47,11 +47,3 @@ The UI prototype for the Automated Resume Screening System was designed using Go
 
 [View UI Design](https://stitch.withgoogle.com/projects/15185186138136535183)
 
- Demo Video
-
-The demo videos demonstrate the complete working of the Automated Resume Screening System.
-
-- [Watch Demo Video – Part 1](https://drive.google.com/file/d/18cz1qnIs6B0wgVhcTo22_dNslC73B6US/view?usp=sharing)
-- [Watch Demo Video – Part 2](https://drive.google.com/file/d/1Lyo7YpsfMeQb7fEmqz1FyrlvoClj0AjF/view?usp=sharing)
-
-  THANK U
