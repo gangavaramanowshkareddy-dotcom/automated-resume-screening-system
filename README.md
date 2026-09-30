@@ -1,16 +1,65 @@
-# React + Vite
+ Automated Resume Screening System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-assisted automated resume screening platform designed to help HR teams process Job Descriptions and multiple candidate resumes, extract candidate information, evaluate candidates against the JD, calculate screening scores, automate shortlist/rejection actions, and maintain structured screening results.
 
-Currently, two official plugins are available:
+ Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system combines a React frontend, FastAPI backend, PostgreSQL database, n8n workflow automation, and a local LLM served through Ollama.
 
-## React Compiler
+The application is designed to automate the repetitive parts of initial resume screening while keeping HR in control of the screening threshold and final hiring decision.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Key Features
 
-## Expanding the ESLint configuration
+- HR login and protected application routes
+- Job creation and job management
+- Job Description upload and configuration
+- Multiple resume upload
+- Resume processing and information extraction
+- PDF/DOCX/image-based resume handling
+- AI-assisted JD-to-resume matching
+- Candidate scoring
+- Configurable screening threshold
+- Automated shortlist processing
+- Automated rejection emails
+- Google Sheets reporting
+- Candidate results and summaries
+- Dashboard statistics
+- Candidate analytics
+- Screening cancellation support
+- Password reset functionality
+- JWT-based authentication
+- PostgreSQL persistence
+- Docker support
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ System Architecture
+
+```text
+                    HR / Recruiter
+                          |
+                          v
+                  React Frontend
+                          |
+                          v
+                   FastAPI Backend
+                    /           \
+                   /             \
+                  v               v
+            PostgreSQL       n8n Workflow
+                                  |
+                +-----------------+-----------------+
+                |                 |                 |
+                v                 v                 v
+         Resume Processing    Ollama / LLM     Email Service
+                |                 |
+                v                 v
+        Candidate Extraction  JD Matching
+                                  |
+                                  v
+                           Scoring / Decision
+                              /         \
+                             /           \
+                            v             v
+                     Shortlisted       Rejected
+                            |             |
+                            v             v
+                     Google Sheets   Rejection Email
